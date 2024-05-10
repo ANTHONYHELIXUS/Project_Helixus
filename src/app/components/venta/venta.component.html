@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Tipo de Venta</h4>
+        <select class="form-select">
+          <option selected>Seleccionar tipo de venta...</option>
+          <option value="1">Nota de Venta</option>
+          <option value="2">Boleta</option>
+          <option value="3">Factura Electrónica</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <h4>Cliente</h4>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Buscar cliente...">
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#nuevoClienteModal">Buscar</button>
+        
+    </div>
+  
+    <!-- Aquí iría el resto de la interfaz, como el vendedor, agregar productos, listado de productos, subtotal, etc. -->
+  
+    <!-- Modal para registrar nuevo cliente -->
+    <div class="modal fade" id="nuevoClienteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrar Nuevo Cliente</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Formulario para registrar nuevo cliente -->
+            <form>
+              <div class="mb-3">
+                <label for="nombreCliente" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreCliente">
+              </div>
+              <div class="mb-3">
+                <label for="apellidoCliente" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellidoCliente">
+              </div>
+              <!-- Otros campos del formulario -->
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Buscar Producto por Nombre</h4>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Nombre del producto...">
+          <button class="btn btn-outline-secondary" type="button">Buscar</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h4>Buscar Producto por Código de Barras</h4>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Código de barras...">
+          <button class="btn btn-outline-secondary" type="button">Buscar</button>
+        </div>
+      </div>
+    </div>
+  
+    <h4>Productos Seleccionados</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Subtotal</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se añadirán dinámicamente las filas con los productos seleccionados -->
+        <!-- Por ahora dejamos este espacio vacío -->
+      </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-6">
+          <h4>Subtotal: $<span id="subtotal">0.00</span></h4>
+        </div>
+        <div class="col-md-6">
+          <h4>Total a Pagar: $<span id="totalPagar">0.00</span></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="inputPago" class="form-label">Pago con:</label>
+            <input type="text" class="form-control" id="inputPago" placeholder="Monto del pago">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4>Vuelto: $<span id="vuelto">0.00</span></h4>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <!-- Resto del contenido del módulo de venta -->
+      
+        <!-- Botón para guardar la venta -->
+        <div class="row mt-3">
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-success btn-lg">Guardar Venta</button>
+          </div>
+        </div>
+      </div>
+      
