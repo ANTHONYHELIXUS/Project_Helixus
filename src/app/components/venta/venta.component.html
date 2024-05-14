@@ -1,114 +1,616 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h4>Tipo de Venta</h4>
-        <select class="form-select">
-          <option selected>Seleccionar tipo de venta...</option>
-          <option value="1">Nota de Venta</option>
-          <option value="2">Boleta</option>
-          <option value="3">Factura Electrónica</option>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <h4>Cliente</h4>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Buscar cliente...">
-          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#nuevoClienteModal">Buscar</button>
-        
-    </div>
-  
-    <!-- Aquí iría el resto de la interfaz, como el vendedor, agregar productos, listado de productos, subtotal, etc. -->
-  
-    <!-- Modal para registrar nuevo cliente -->
-    <div class="modal fade" id="nuevoClienteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Registrar Nuevo Cliente</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Formulario para registrar nuevo cliente -->
-            <form>
-              <div class="mb-3">
-                <label for="nombreCliente" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombreCliente">
+<div data-v-ad2a4970="" class="ancho container">
+  <div data-v-ad2a4970=""></div>
+  <br data-v-ad2a4970="" /><br data-v-ad2a4970="" />
+  <form data-v-ad2a4970="" class="">
+    <div data-v-ad2a4970="" class="row">
+      <div data-v-ad2a4970="" class="col-md-7">
+        <div data-v-ad2a4970="" class="row">
+          <div data-v-ad2a4970="" class="col-md-8" style="margin-top: 2px">
+            <fieldset data-v-ad2a4970="" id="__BVID__32" role="group" class="b-form-group form-group">
+              <!---->
+              <div role="group" class="">
+                <h2 data-v-ad2a49760="">Tipo de Venta:
+                  <b data-v-ad2a4970="" class="mostrarSerie" style="display: none">010 - 61837</b></h2>
+                  <select class="form-control">
+                    <option value="NOTA DE VENTA">NOTA DE VENTA</option>
+                    <option value="FACTURA ELECTRONICA">FACTURA ELECTRONICA</option>
+                    <option value="BOLETA ELECTRONICA">BOLETA ELECTRONICA</option>
+                  </select>
+                <!----><!----><!---->
               </div>
-              <div class="mb-3">
-                <label for="apellidoCliente" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellidoCliente">
+            </fieldset>
+            <!---->
+          </div>
+          <div data-v-ad2a4970="" class="ocularMovil col-md-4" style="padding-top: 30px">
+            <fieldset data-v-ad2a4970="" id="__BVID__34" role="group" class="b-form-group form-group">
+              <!---->
+              <div role="group" class="">
+                <label data-v-ad2a4970="">Almacen:</label>
+                <div data-v-ad2a4970="" class="autocomplete-wrapper">
+                  <input type="text" placeholder="" autocomplete="off" class="form-control autocomplete-input"
+                    required="true" disabled="" />
+                  <div class="autocomplete autocomplete-list" style="display: none">
+                    <ul></ul>
+                  </div>
+                </div>
+                <!----><!----><!---->
               </div>
-              <!-- Otros campos del formulario -->
-              <button type="submit" class="btn btn-primary">Guardar</button>
-            </form>
+            </fieldset>
+            <!---->
+          </div>
+          <div data-v-ad2a4970="" class="ocularMovil col-md-4" style="margin-top: 2px">
+            <fieldset data-v-ad2a4970="" id="__BVID__36" role="group" class="b-form-group form-group">
+              <!---->
+              
+            </fieldset>
+          </div>
+          <div data-v-ad2a4970="" class="col-md-12" style="margin-top: 2px">
+            <fieldset data-v-ad2a4970="" id="__BVID__38" role="group" class="b-form-group form-group">
+              <!---->
+              <div role="group" class="">
+                <label data-v-ad2a4970="">Cliente:</label>
+                <div data-v-ad2a4970="" role="group" class="input-group">
+                  <!---->
+                  <div data-v-ad2a4970="" class="autocomplete-wrapper">
+                    <input type="text" placeholder="Cliente varios" autocomplete="off" class="form-control autocomplete-input"
+                      required="true" />
+                    <div class="autocomplete autocomplete-list" style="display: none">
+                      <ul></ul>
+                    </div>
+                  </div>
+                  <input data-v-ad2a4970="" type="text" placeholder="Codigo de Barra" class="form-control" />
+                  <div data-v-ad2a4970="" class="input-group-append">
+                    <div data-v-21ab9c64="" data-v-ad2a4970="" ruc="">
+                      <button data-v-21ab9c64="" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modal1" (click)="(modalregiste.toggleAttribute)">
+                        Nuevo
+                      </button>
+
+                      <form data-v-21ab9c64="" class="">
+                        <div data-v-21ab9c64="">
+                          <div id="modal1___BV_modal_outer_">
+                            <div id="modal1" #modalregiste role="dialog" aria-hidden="true" class="modal fade"
+                              style="display: none">
+                              <div class="modal-dialog modal-lg">
+                                <div tabindex="-1" role="document" aria-labelledby="modal1___BV_modal_header_"
+                                  aria-describedby="modal1___BV_modal_body_" class="modal-content">
+                                  <header id="modal1___BV_modal_header_" class="modal-header">
+                                    <label class="modal-title">Nuevo Cliente</label>
+                                    
+                                  </header>
+                                  <div id="modal1___BV_modal_body_" class="modal-body">
+                                    <div data-v-21ab9c64="" class="row">
+                                      <div data-v-21ab9c64="" class="col-md-12">
+                                        <fieldset data-v-21ab9c64="" id="__BVID__43" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label for="rucInput">DNI / RUC:</label>
+                                            <div data-v-21ab9c64="" role="group" class="input-group">
+                                              <input type="text" class="form-control"   [(ngModel)]="numeroRucdni"  [ngModelOptions]="{standalone: true}" placeholder="Ingrese el RUC">
+
+                                              <button class="btn btn-primary" (click)="buscar()" >Buscar</button>
+                                          
+                                            </div>
+                                            <!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                        <fieldset data-v-21ab9c64="" id="__BVID__45" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div *ngIf="rucInfo"  >
+                                            <label data-v-21ab9c64="">Nombre del Cliente:</label>
+                                         
+                                       
+                                            <label>Información del RUC:</label>
+                                            <p><strong>Razón Social:</strong> {{ rucInfo.razonSocial }}</p>
+                                              
+                                              <!----><!----><!---->
+                                          </div>
+                                          <div >
+                                            <label>Información del DNI:</label>
+                                            <p><strong>Nombre:</strong> {{rucdni.nombres}}</p>
+                                          </div>
+                                        </fieldset>
+                                        <fieldset data-v-21ab9c64="" id="__BVID__47" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label data-v-21ab9c64="">Dirección: </label>
+                                            <input data-v-21ab9c64="" id="__BVID__48" type="text" value="{{rucInfo.direccion}}"
+                                              class="form-control" /><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                
+                                        
+                                      </div>
+                                    </div>
+                                    <div data-v-21ab9c64="" class="row">
+                                      <div data-v-21ab9c64="" class="col">
+                                        <fieldset data-v-21ab9c64="" id="__BVID__53" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label data-v-21ab9c64="">Teléfono:</label>
+                                            <input data-v-21ab9c64="" id="__BVID__54" type="text" value=""
+                                              class="form-control" /><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                      </div>
+                                      <div data-v-21ab9c64="" class="col">
+                                        <fieldset data-v-21ab9c64="" id="__BVID__55" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label data-v-21ab9c64="">Correo Electrónico:</label>
+                                            <input data-v-21ab9c64="" id="__BVID__56" type="email" value=""
+                                              class="form-control" /><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                      </div>
+                                      <div data-v-21ab9c64="" class="col">
+                                        <fieldset data-v-21ab9c64="" id="__BVID__57" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label data-v-21ab9c64="">Condicion:</label>
+                                            <input data-v-21ab9c64="" id="__BVID__58" type="text" value=""
+                                              class="form-control" /><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                      </div>
+                                    </div>
+                                    <div data-v-21ab9c64="" class="row">
+                                      <div data-v-21ab9c64="" class="col">
+                                        <fieldset data-v-21ab9c64="" id="__BVID__59" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label data-v-21ab9c64="">Sexo:</label>
+                                            <select data-v-21ab9c64="" id="__BVID__60"
+                                              class="mb-3 form-control custom-select">
+                                              <option value="M">M</option>
+                                              <option value="F">
+                                                F
+                                              </option>
+                                            </select><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                      </div>
+                                      <div data-v-21ab9c64="" class="col">
+                                        <fieldset data-v-21ab9c64="" id="__BVID__61" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label data-v-21ab9c64="">Ocupación:</label>
+                                            <input data-v-21ab9c64="" id="__BVID__62" type="text" value=""
+                                              class="form-control" /><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                      </div>
+                                    </div>
+                                    <div data-v-21ab9c64="" class="row">
+                                      <div data-v-21ab9c64="" class="col">
+                                        <div data-v-21ab9c64=""
+                                          class="custom-control custom-checkbox custom-control-inline">
+                                          <input id="__BVID__63" type="checkbox" autocomplete="off" true-value="1"
+                                            false-value="0" class="custom-control-input" value="1" /><label
+                                            for="__BVID__63" class="custom-control-label">
+                                            Marcar si es un cliente VIP
+                                          </label>
+                                        </div>
+                                      </div>
+                                      <div data-v-21ab9c64="" class="col">
+                                        <fieldset data-v-21ab9c64="" id="__BVID__64" role="group"
+                                          class="b-form-group form-group">
+                                          <!---->
+                                          <div role="group" class="">
+                                            <label data-v-21ab9c64="">Fecha Nacimiento:</label>
+                                            <input data-v-21ab9c64="" id="__BVID__65" type="date" value=""
+                                              class="form-control" /><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                      </div>
+                                      <footer id="modal1___BV_modal_footer_" class="modal-footer">
+                                        <div data-v-21ab9c64=""><button data-v-21ab9c64="" type="submit"
+                                            class="btn btn-primary">
+                                            Guardar
+                                          </button> <button data-v-21ab9c64="" type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Close
+                                          </button></div>
+                                      </footer>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!---->
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <select data-v-ad2a4970="" id="__BVID__136" class="mb-3 form-control custom-select">
+                  <option data-v-ad2a4970="" value=""></option>
+                  <option data-v-ad2a4970="" value=""></option>
+                  <option data-v-ad2a4970="" value=""></option>
+                </select>
+                <div data-v-ad2a4970="" role="group" class="input-group">
+                  <div data-v-ad2a4970="" class="custom-control custom-checkbox custom-control-inline"></div>
+                  <!---->
+                </div>
+                <!----><!----><!---->
+              </div>
+            </fieldset>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h4>Buscar Producto por Nombre</h4>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Nombre del producto...">
-          <button class="btn btn-outline-secondary" type="button">Buscar</button>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <h4>Buscar Producto por Código de Barras</h4>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Código de barras...">
-          <button class="btn btn-outline-secondary" type="button">Buscar</button>
-        </div>
-      </div>
-    </div>
-  
-    <h4>Productos Seleccionados</h4>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Producto</th>
-          <th scope="col">Marca</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Subtotal</th>
-          <th scope="col">Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Aquí se añadirán dinámicamente las filas con los productos seleccionados -->
-        <!-- Por ahora dejamos este espacio vacío -->
-      </tbody>
-    </table>
-    <div class="row">
-        <div class="col-md-6">
-          <h4>Subtotal: $<span id="subtotal">0.00</span></h4>
-        </div>
-        <div class="col-md-6">
-          <h4>Total a Pagar: $<span id="totalPagar">0.00</span></h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="inputPago" class="form-label">Pago con:</label>
-            <input type="text" class="form-control" id="inputPago" placeholder="Monto del pago">
+
+      <div data-v-ad2a4970="" class="ocularMovil col-md-2">
+        <fieldset data-v-ad2a4970="" id="__BVID__66" role="group" class="text-center b-form-group form-group" style="margin-top: -10px;">
+          <!---->
+          <div role="group" class="">
+            <div data-v-ad2a4970="" class="big-text">
+              010 - <b data-v-ad2a4970="">61837</b>
+            </div>
+            2024-04-30T11:39:22
+            <!----><!----><!---->
           </div>
-        </div>
-        <div class="col-md-6">
-          <h4>Vuelto: $<span id="vuelto">0.00</span></h4>
+        </fieldset>
+        <fieldset data-v-ad2a4970="" id="__BVID__67" role="group" class="b-form-group form-group" style="padding-top: -50px;">
+          <!---->
+          <div role="group" class="">
+            <label data-v-ad2a4970="">Vendedor:</label>
+            <div data-v-ad2a4970="" class="autocomplete-wrapper">
+              <input type="text" autocomplete="off" class="form-control autocomplete-input" required="true"
+                disabled="" />
+              <div class="autocomplete autocomplete-list" style="display: none">
+                <ul></ul>
+              </div>
+            </div>
+            <!----><!----><!---->
+          </div>
+        </fieldset>
+        <fieldset data-v-ad2a4970="" id="__BVID__69" role="group" class="b-form-group form-group" style="display: none">
+          <!---->
+          <div role="group" class="">
+            <label data-v-ad2a4970="">Comisionista</label>
+            <div data-v-ad2a4970="" class="autocomplete-wrapper">
+              <input type="text" placeholder="Comisionista" autocomplete="off"
+                class="form-control autocomplete-input" />
+              <div class="autocomplete autocomplete-list" style="display: none">
+                <ul></ul>
+              </div>
+            </div>
+            <!----><!----><!---->
+          </div>
+        </fieldset>
+        <!---->
+        <!---->
+      </div>
+    </div>
+
+    <br data-v-ad2a4970="" />
+    <div data-v-ad2a4970="" class="row">
+      <div data-v-ad2a4970="" class="col">
+        <div data-v-bbc62c28="" data-v-ad2a4970="" class="row" style="margin-top: -20px">
+          <div data-v-bbc62c28="" class="col-md-12">
+            <fieldset data-v-bbc62c28="" id="__BVID__72" role="group" class="b-form-group form-group">
+              <!---->
+              <form (ngSubmit)="onSearch()">
+                <div role="group" class="">
+                  <label data-v-bbc62c28="">Agregar Productos:</label>
+                  <div data-v-bbc62c28="" role="group" class="input-group">
+                    <div data-v-bbc62c28="" *ngIf="ListProductos.length">
+                      <input class="form-control" id="inputlist" style="position: relative" [(ngModel)]="searchTerm"
+                        name="searchTerm" (input)="filtrarProductos()" (click)="abrirDesplegable()" 
+                        placeholder="Buscar Por Nombre..." />
+
+                      <!-- <input class="form-control"  list="datalistOptions"  [(ngModel)]="searchTerm"  name="searchTerm" (click)="abrirDesplegable()"  placeholder="Buscar Por Nombre..." > -->
+                      @if(abrirDes){
+                      <div style="
+                          position: absolute;
+                          border: 1px solid gray;
+                          padding: 3px;
+                          background-color: white;
+                        ">
+                        <span>Lista</span>
+                        <div style="display: flex; flex-direction: column">
+                          @for(product of ListProductos; track product){
+                          <span class="hover-list" style="
+                              padding: 7px;
+                              border-top: 1px;
+                              border-bottom: 2px;
+                            " (click)="selectProduct(product, $event)">{{ product.Nombre }}</span>
+                          }
+                        </div>
+                      </div>
+                      <!-- <datalist >
+                          @for(product of ListProductos; track product){
+                            <option   [value]="product.Nombre" (click)="selectProduct(product, $event)" ></option>
+                          }
+                        </datalist> -->
+                      }
+                    </div>
+                    <input data-v-bbc62c28="" type="text" placeholder="Código de Barras" class="form-control" />
+                    <div data-v-bbc62c28="" class="input-group-append">
+                      <div data-v-bbc62c28="">
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <span data-v-bbc62c28="" class="badge badge-danger">Productos sin stock</span>
+                </div>
+              </form>
+            </fieldset>
+            <div data-v-bbc62c28="">
+              <div id="modalImagen___BV_modal_outer_">
+                <div id="modalImagen" role="dialog" aria-hidden="true" class="modal fade" style="display: none">
+                  <div class="modal-dialog modal-lg">
+                    <div tabindex="-1" role="document" aria-describedby="modalImagen___BV_modal_body_"
+                      class="modal-content">
+                      <!---->
+                      <div id="modalImagen___BV_modal_body_" class="modal-body">
+                        <div data-v-bbc62c28="" class="d-block text-center">
+                          <h3 data-v-bbc62c28="" style="text-decoration: underline"></h3>
+                        </div>
+                        <div data-v-bbc62c28="" class="row" style="
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                          ">
+                          <img data-v-bbc62c28="" src="" class="imagenGrande" />
+                        </div>
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div data-v-bbc62c28="">
+              <div id="modalCantidad___BV_modal_outer_">
+                <div id="modalCantidad" role="dialog" aria-hidden="true" class="modal fade" style="display: none">
+                  <div class="modal-dialog modal-lg">
+                    <div tabindex="-1" role="document" aria-describedby="modalCantidad___BV_modal_body_"
+                      class="modal-content">
+                      <!---->
+                      <div id="modalCantidad___BV_modal_body_" class="modal-body">
+                        <div data-v-bbc62c28="" class="d-block text-center">
+                          <h3 data-v-bbc62c28="" style="text-decoration: underline"></h3>
+                          <h5 data-v-bbc62c28="">Presentaciones</h5>
+                        </div>
+                        <hr data-v-bbc62c28="" />
+                        <div data-v-bbc62c28="" class="row">
+                          <div data-v-bbc62c28="" class="col-6">
+                            <div data-v-bbc62c28="" class="card mb-3 contentCard text-center">
+                              <div data-v-bbc62c28="" class="card-body">
+                                <div data-v-bbc62c28="" class="row">
+                                  <div data-v-bbc62c28="" class="nomCart col-md-6">
+                                    <div data-v-bbc62c28="">
+                                      <div data-v-bbc62c28="" class="row nomCart2">
+                                        <h6 data-v-bbc62c28="" class="text-uppercase"></h6>
+                                      </div>
+                                      <div data-v-bbc62c28="" class="row nomCart2">
+                                        <h6 data-v-bbc62c28="" style="margin-right: 5px">
+                                          Stock:
+                                        </h6>
+                                        <h5 data-v-bbc62c28="">
+                                          <span data-v-bbc62c28="" class="badge badge-success">0.00</span>
+                                        </h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div data-v-bbc62c28="" class="text-left col-md-6">
+                                    <h5 data-v-bbc62c28="">x1</h5>
+                                    <span data-v-bbc62c28=""><b data-v-bbc62c28="">COSTO: </b>S/
+                                      0.00</span><br data-v-bbc62c28="" />
+                                    <b data-v-bbc62c28="">VENTA: </b>S/ 0.00
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div data-v-bbc62c28="" class="table-responsive">
+              <table id="__BVID__125" aria-busy="false" aria-colcount="13"
+                class="table b-table table-striped table-hover table-sm">
+                <!----><!---->
+                <thead class="">
+                  <tr>
+                    <th aria-colindex="1" class="table-info text-center">
+                      Stock
+                    </th>
+                    <th aria-colindex="2" class="">Producto</th>
+                    <th aria-colindex="3" class="">Marca</th>
+                    <th aria-colindex="4" class=""></th>
+                    <th aria-colindex="5" class=""></th>
+                    <th aria-colindex="6" class=""></th>
+                    <th aria-colindex="7" class="">Presentación</th>
+                    <th aria-colindex="8" class="">Cantidad</th>
+                    <th aria-colindex="9" class="">Precio</th>
+                    <th aria-colindex="10" class="table-success text-center">
+                      SubTotal
+                    </th>
+                    <th aria-colindex="11" class="">Descuento</th>
+                    <th aria-colindex="12" class="table-danger text-center">
+                      Total
+                    </th>
+                    <th aria-colindex="11" class="">Accion</th>
+                    <th aria-colindex="13" class=""></th>
+                  </tr>
+                </thead>
+                <!---->
+                <tbody>
+                  <tr *ngFor="let product of ListVenta; let i = index">
+                    <td>{{ product.Stock }}</td>
+                    <td>{{ product.Nombre }}</td>
+                    <td>{{ product.MarcaID }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button type="button" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-justify" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td>
+                      <input type="number" [(ngModel)]="selectedQuantity" name="selectedQuantity"
+                        (input)="updateSubtotal(product)" class="form-control" style="width: 90px" />
+                    </td>
+                    <td>{{ product.Pventa }}</td>
+                    <td>{{ product.Subtotal }}</td>
+                    <td>
+                      <input type="string" class="form-control" style="width: 90px" />
+                    </td>
+                    <td>{{ product.Subtotal }}</td>
+                    <td></td>
+                    <td>
+                      <button class="btn btn-danger" (click)="removeSelectedProduct(i)">
+                        X
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div data-v-bbc62c28="" class="col-md-4">
+            <table data-v-ad2a4970="" data-v-bbc62c28="" class="table b-table border table-footer table-sm">
+              <tbody data-v-ad2a4970="" data-v-bbc62c28="">
+                <tr data-v-ad2a4970="" data-v-bbc62c28="">
+                  <td data-v-ad2a4970="" data-v-bbc62c28="" colspan="3" class="text-center">
+                    Metodo de Pago
+                  </td>
+                </tr>
+                <tr data-v-ad2a4970="" data-v-bbc62c28="">
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">Efectivo</td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <button data-v-ad2a4970="" data-v-bbc62c28="" type="button" class="btn mt-1 btn-info btn-sm">
+                      <i data-v-ad2a4970="" data-v-bbc62c28="" class="fas fa-check"></i>
+                    </button>
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" id="__BVID__129" type="text" placeholder="Descripcion"
+                      class="form-control" data-v-bbc62c28="" />
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" data-v-bbc62c28="" min="0" step="0.01" type="number" placeholder="S/."
+                      class="form-control" />
+                  </td>
+                </tr>
+                <tr data-v-ad2a4970="" data-v-bbc62c28="">
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">Tarjeta</td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <button data-v-ad2a4970="" data-v-bbc62c28="" type="button" class="btn mt-1 btn-info btn-sm">
+                      <i data-v-ad2a4970="" data-v-bbc62c28="" class="fas fa-check"></i>
+                    </button>
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" id="__BVID__130" type="text" placeholder="Descripcion"
+                      class="form-control" data-v-bbc62c28="" />
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" data-v-bbc62c28="" min="0" step="0.01" type="number" placeholder="S/."
+                      class="form-control" />
+                  </td>
+                </tr>
+                <tr data-v-ad2a4970="" data-v-bbc62c28="">
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">Yape/Plin</td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <button data-v-ad2a4970="" data-v-bbc62c28="" type="button" class="btn mt-1 btn-info btn-sm">
+                      <i data-v-ad2a4970="" data-v-bbc62c28="" class="fas fa-check"></i>
+                    </button>
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" id="__BVID__131" type="text" placeholder="Descripcion"
+                      class="form-control" data-v-bbc62c28="" />
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" data-v-bbc62c28="" min="0" step="0.01" type="number" placeholder="S/."
+                      class="form-control" />
+                  </td>
+                </tr>
+                <tr data-v-ad2a4970="" data-v-bbc62c28="">
+                  <td data-v-ad2a4970="" data-v-bbc62c28="" style="vertical-align: middle !important">
+                    Transferencia
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <button data-v-ad2a4970="" data-v-bbc62c28="" type="button" class="btn mt-1 btn-info btn-sm">
+                      <i data-v-ad2a4970="" data-v-bbc62c28="" class="fas fa-check"></i>
+                    </button>
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" id="__BVID__132" type="text" placeholder="Descripcion"
+                      class="form-control" data-v-bbc62c28="" />
+                  </td>
+                  <td data-v-ad2a4970="" data-v-bbc62c28="">
+                    <input data-v-ad2a4970="" data-v-bbc62c28="" min="0" step="0.01" type="number" placeholder="S/."
+                      class="form-control" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div data-v-bbc62c28="" class="col-md-2"></div>
+          <div data-v-bbc62c28="" class="col-md-3">
+            <table data-v-bbc62c28="" class="table b-table border table-footer">
+              <tbody data-v-bbc62c28="">
+                <!---->
+                <!---->
+                <tr data-v-bbc62c28="">
+                  <td data-v-bbc62c28=""><b data-v-bbc62c28="">SubTotal</b></td>
+                  <td data-v-bbc62c28="" class="table-danger">0.00</td>
+                </tr>
+                <!---->
+                <tr data-v-bbc62c28="">
+                  <td data-v-bbc62c28=""><b data-v-bbc62c28="">TOTAL</b></td>
+                  <td data-v-bbc62c28="" class="table-danger">0.00</td>
+                </tr>
+                <tr data-v-bbc62c28="">
+                  <td data-v-bbc62c28="" colspan="2">
+                    <label data-v-bbc62c28="">pagó con:</label>
+                    <input data-v-bbc62c28="" id="__BVID__133" type="text" placeholder="Pagó con" value="0"
+                      class="form-control" /><br data-v-bbc62c28="" />
+                    <label data-v-bbc62c28="">Vuelto:</label>
+                    <b data-v-bbc62c28="">S/ 0.00</b>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br data-v-bbc62c28="" /><br data-v-bbc62c28="" />
         </div>
       </div>
     </div>
-    <div class="container">
-        <!-- Resto del contenido del módulo de venta -->
-      
-        <!-- Botón para guardar la venta -->
-        <div class="row mt-3">
-          <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-success btn-lg">Guardar Venta</button>
-          </div>
-        </div>
+    <div data-v-ad2a4970="" class="row text-center justify-content-center" style="margin-top: -15px">
+      <div data-v-ad2a4970="" class="col-8">
+        <br data-v-ad2a4970="" />
+
+        <button data-v-ad2a4970="" type="submit" class="btn btn-success btn-lg">
+          Efectuar Venta
+        </button>
+        <!---->
+        <br data-v-ad2a4970="" />
+        <br data-v-ad2a4970="" />
       </div>
-      
+    </div>
+  </form>
+</div>
