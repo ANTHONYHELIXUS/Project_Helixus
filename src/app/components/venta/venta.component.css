@@ -1,0 +1,64 @@
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            text-align: center;
+        }
+        .autocomplete {
+            position: relative;
+          }
+          
+          .autocomplete-list {
+            position: absolute;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-top: none;
+          }
+          
+          .autocomplete-list li {
+            padding: 5px 10px;
+            cursor: pointer;
+          }
+          
+          .autocomplete-list li:hover {
+            background-color: #f0f0f0;
+          }
+          
+
+.hover-list:hover{
+    background-color: #ccc;
+    padding: 7px;
+}
+div.w-33 {
+  width: 100%;
+ 
+}
+
+div.center {
+  text-align: center;
+}
+
+#inputDefault {
+  width: 20%;
+  margin-left: 12%;
+  margin-top: 1%;
+  
+}
+
+p{
+  margin-top: 1%;
+}
+h6 {
+  margin-right: 50%; /* Ajusta este valor según tus necesidades */
+}
+

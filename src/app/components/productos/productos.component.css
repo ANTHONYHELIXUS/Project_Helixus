@@ -1,0 +1,24 @@
+div.w-33 {
+    width: 100%;
+   
+  }
+  
+  div.center {
+    text-align: center;
+  }
+  
+  #inputDefault {
+    width: 20%;
+    margin-left: 12%;
+    margin-top: 1%;
+    
+  }
+
+  p{
+    margin-top: 1%;
+  }
+ h6 {
+    margin-right: 50%; /* Ajusta este valor según tus necesidades */
+}
+
+  
