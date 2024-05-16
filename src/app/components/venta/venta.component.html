@@ -9,13 +9,17 @@
             <fieldset data-v-ad2a4970="" id="__BVID__32" role="group" class="b-form-group form-group">
               <!---->
               <div role="group" class="">
-                <h2 data-v-ad2a49760="">Tipo de Venta:
-                  <b data-v-ad2a4970="" class="mostrarSerie" style="display: none">010 - 61837</b></h2>
-                  <select class="form-control">
-                    <option value="NOTA DE VENTA">NOTA DE VENTA</option>
-                    <option value="FACTURA ELECTRONICA">FACTURA ELECTRONICA</option>
-                    <option value="BOLETA ELECTRONICA">BOLETA ELECTRONICA</option>
-                  </select>
+                <h2 data-v-ad2a49760="">
+                  Tipo de Venta:
+                  <b data-v-ad2a4970="" class="mostrarSerie" style="display: none">010 - 61837</b>
+                </h2>
+                <select class="form-control">
+                  <option value="NOTA DE VENTA">NOTA DE VENTA</option>
+                  <option value="FACTURA ELECTRONICA">
+                    FACTURA ELECTRONICA
+                  </option>
+                  <option value="BOLETA ELECTRONICA">BOLETA ELECTRONICA</option>
+                </select>
                 <!----><!----><!---->
               </div>
             </fieldset>
@@ -41,7 +45,6 @@
           <div data-v-ad2a4970="" class="ocularMovil col-md-4" style="margin-top: 2px">
             <fieldset data-v-ad2a4970="" id="__BVID__36" role="group" class="b-form-group form-group">
               <!---->
-              
             </fieldset>
           </div>
           <div data-v-ad2a4970="" class="col-md-12" style="margin-top: 2px">
@@ -52,8 +55,8 @@
                 <div data-v-ad2a4970="" role="group" class="input-group">
                   <!---->
                   <div data-v-ad2a4970="" class="autocomplete-wrapper">
-                    <input type="text" placeholder="Cliente varios" autocomplete="off" class="form-control autocomplete-input"
-                      required="true" />
+                    <input type="text" placeholder="Cliente varios" autocomplete="off"
+                      class="form-control autocomplete-input" required="true" />
                     <div class="autocomplete autocomplete-list" style="display: none">
                       <ul></ul>
                     </div>
@@ -76,7 +79,6 @@
                                   aria-describedby="modal1___BV_modal_body_" class="modal-content">
                                   <header id="modal1___BV_modal_header_" class="modal-header">
                                     <label class="modal-title">Nuevo Cliente</label>
-                                    
                                   </header>
                                   <div id="modal1___BV_modal_body_" class="modal-body">
                                     <div data-v-21ab9c64="" class="row">
@@ -87,10 +89,14 @@
                                           <div role="group" class="">
                                             <label for="rucInput">DNI / RUC:</label>
                                             <div data-v-21ab9c64="" role="group" class="input-group">
-                                              <input type="text" class="form-control"   [(ngModel)]="numeroRucdni"  [ngModelOptions]="{standalone: true}" placeholder="Ingrese el RUC">
+                                              <input type="text" class="form-control" [(ngModel)]="numeroRucdni"
+                                                [ngModelOptions]="{
+                                                  standalone: true
+                                                }" placeholder="Ingrese el RUC O DNI" />
 
-                                              <button class="btn btn-primary" (click)="buscar()" >Buscar</button>
-                                          
+                                              <button class="btn btn-primary" (click)="buscar()">
+                                                Buscar
+                                              </button>
                                             </div>
                                             <!----><!----><!---->
                                           </div>
@@ -98,40 +104,29 @@
                                         <fieldset data-v-21ab9c64="" id="__BVID__45" role="group"
                                           class="b-form-group form-group">
                                           <!---->
-                                          <div *ngIf="rucInfo"  >
-                                           
-                                         
-                                            <label data-v-21ab9c64="">Nombre: </label>
-                                            <input data-v-21ab9c64="" id="__BVID__48" type="text" value="{{ rucInfo.razonSocial }}"
-                                              class="form-control" />
-                                            
-                                            
-                                              
-                                              <!----><!----><!---->
+                                          <div *ngIf="rucdni">
+                                          <div *ngIf="rucInfo">
+                                            <label data-v-21ab9c64="">Nombre:
+                                            </label>
+                                            <input data-v-21ab9c64="" id="__BVID__48" type="text"
+                                              value="{{ rucInfo.razonSocial }}"  value="{{ rucdni.nombres }}"  class="form-control" />
+
+                                            <!----><!----><!---->
                                           </div>
-                                          <div *ngIf="rucdni"  >
-                                           
+                                        </div>
                                          
-                                            <label >Nombre: </label>
-                                            <input type="text" value="{{ rucdni.nombre }}"
-                                              class="form-control" />
-                                            
-                                            
-                                              
-                                              <!----><!----><!---->
-                                          </div>
                                         </fieldset>
                                         <fieldset data-v-21ab9c64="" id="__BVID__47" role="group"
                                           class="b-form-group form-group">
                                           <!---->
                                           <div role="group" class="">
-                                            <label data-v-21ab9c64="">Dirección: </label>
-                                            <input data-v-21ab9c64="" id="__BVID__48" type="text" value="{{rucInfo.direccion}}"
+                                            <label data-v-21ab9c64="">Dirección:
+                                            </label>
+                                            <input data-v-21ab9c64="" id="__BVID__48" type="text"
+                                              value="{{ rucInfo.direccion }}"
                                               class="form-control" /><!----><!----><!---->
                                           </div>
                                         </fieldset>
-                                
-                                        
                                       </div>
                                     </div>
                                     <div data-v-21ab9c64="" class="row">
@@ -163,8 +158,8 @@
                                           <!---->
                                           <div role="group" class="">
                                             <label data-v-21ab9c64="">Estado:</label>
-                                            <input data-v-21ab9c64="" id="__BVID__58" type="text" value="{{rucInfo.estado}}"
-                                              class="form-control" /><!----><!----><!---->
+                                            <input data-v-21ab9c64="" id="__BVID__58" type="text"
+                                              value="{{ rucInfo.estado }}" class="form-control" /><!----><!----><!---->
                                           </div>
                                         </fieldset>
                                       </div>
@@ -199,7 +194,6 @@
                                       </div>
                                     </div>
                                     <div data-v-21ab9c64="" class="row">
-                                      
                                       <div data-v-21ab9c64="" class="col">
                                         <fieldset data-v-21ab9c64="" id="__BVID__64" role="group"
                                           class="b-form-group form-group">
@@ -212,12 +206,15 @@
                                         </fieldset>
                                       </div>
                                       <footer id="modal1___BV_modal_footer_" class="modal-footer">
-                                        <div data-v-21ab9c64=""><button data-v-21ab9c64="" type="submit"
-                                            class="btn btn-primary">
+                                        <div data-v-21ab9c64="">
+                                          <button data-v-21ab9c64="" type="submit" class="btn btn-primary">
                                             Guardar
-                                          </button> <button data-v-21ab9c64="" type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                          </button>
+                                          <button data-v-21ab9c64="" type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">
                                             Close
-                                          </button></div>
+                                          </button>
+                                        </div>
                                       </footer>
                                     </div>
                                   </div>
@@ -227,7 +224,6 @@
                             <!---->
                           </div>
                         </div>
-
                       </form>
                     </div>
                   </div>
@@ -250,7 +246,8 @@
       </div>
 
       <div data-v-ad2a4970="" class="ocularMovil col-md-2">
-        <fieldset data-v-ad2a4970="" id="__BVID__66" role="group" class="text-center b-form-group form-group" style="margin-top: -10px;">
+        <fieldset data-v-ad2a4970="" id="__BVID__66" role="group" class="text-center b-form-group form-group"
+          style="margin-top: -10px">
           <!---->
           <div role="group" class="">
             <div data-v-ad2a4970="" class="big-text">
@@ -260,7 +257,8 @@
             <!----><!----><!---->
           </div>
         </fieldset>
-        <fieldset data-v-ad2a4970="" id="__BVID__67" role="group" class="b-form-group form-group" style="padding-top: -50px;">
+        <fieldset data-v-ad2a4970="" id="__BVID__67" role="group" class="b-form-group form-group"
+          style="padding-top: -50px">
           <!---->
           <div role="group" class="">
             <label data-v-ad2a4970="">Vendedor:</label>
@@ -306,7 +304,7 @@
                   <div data-v-bbc62c28="" role="group" class="input-group">
                     <div data-v-bbc62c28="" *ngIf="ListProductos.length">
                       <input class="form-control" id="inputlist" style="position: relative" [(ngModel)]="searchTerm"
-                        name="searchTerm" (input)="filtrarProductos()" (click)="abrirDesplegable()" 
+                        name="searchTerm" (input)="filtrarProductos()" (click)="abrirDesplegable()"
                         placeholder="Buscar Por Nombre..." />
 
                       <!-- <input class="form-control"  list="datalistOptions"  [(ngModel)]="searchTerm"  name="searchTerm" (click)="abrirDesplegable()"  placeholder="Buscar Por Nombre..." > -->

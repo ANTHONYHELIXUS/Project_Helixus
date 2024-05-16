@@ -3,7 +3,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { productservice } from '../../core/services/product.service';
 import { products } from '../../core/interfaces/products';
-import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { reniecService } from '../../core/services/reniec.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -16,7 +16,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
     FormsModule,
     MatAutocompleteModule,
     MatInputModule,
-    
   ],
   templateUrl: './venta.component.html',
   styleUrl: './venta.component.css',
@@ -33,15 +32,12 @@ export class VentaComponent implements OnInit {
   cantidad: number = 0;
   Subtotal: number = 0;
   numerodni: string = '';
-  searchTerm: string = '';  
-  
+  searchTerm: string = '';
 
-  constructor(private sSunat: reniecService,
-    private http: HttpClient) {
-     }
-     private _productservice = inject(productservice);
-  
+  constructor(private sSunat: reniecService, private http: HttpClient) {}
 
+  // Inyección de servicios
+  private _productservice = inject(productservice);
   private _reniec = inject(reniecService);
 
   router: any;
@@ -49,8 +45,9 @@ export class VentaComponent implements OnInit {
   filteredproducts: products[] = [];
   ngOnInit(): void {
     this.getListProductos();
-
   }
+
+  // Listener para detectar clics en el documento
   @HostListener('document:click', ['$event'])
   addlisten(e: MouseEvent) {
     let opcion = document.querySelector('#inputlist');
@@ -59,10 +56,10 @@ export class VentaComponent implements OnInit {
 
     if (!opcion || !opcion.contains(event)) {
       this.abrirDes = false;
-      // this.notidicacion= true
     }
   }
 
+  // Método para obtener la lista de productos desde el servicio
   getListProductos() {
     this._productservice.getListProductos().subscribe((data) => {
       this.ListProductos = data;
@@ -70,18 +67,18 @@ export class VentaComponent implements OnInit {
     });
   }
 
+  // Método para filtrar los productos según el término de búsqueda
   filtrarProductos() {
     this.filteredproducts = this.ListProductos.filter((producto) => {
-      // Aquí puedes definir la lógica de filtrado según tu necesidad
-
       return this.product.Nombre.toLowerCase().includes(
         this.searchTerm.toLowerCase()
       );
     });
 
-    this.abrirDes = true; // Mostrar el desplegable al filtrar
+    this.abrirDes = true;
   }
 
+  // Método para realizar la búsqueda de productos
   onSearch() {
     if (this.searchTerm.trim() !== '') {
       this._productservice.searchProduct(this.searchTerm).subscribe((data) => {
@@ -89,14 +86,13 @@ export class VentaComponent implements OnInit {
       });
     }
   }
+
+  // Método para seleccionar un producto de la lista
   selectProduct(product: products, event: any) {
-    // Aquí puedes realizar alguna acción cuando el usuario selecciona un producto
-    // this.ListVenta.push(product);
     console.log('se seleccionao ', product);
     console.log(event);
     this.addProductToVenta(product);
     this.updateSubtotal(product);
-    //pon en la vista
   }
   abrirDesplegable() {
     this.abrirDes = true;
@@ -104,47 +100,17 @@ export class VentaComponent implements OnInit {
   }
   addProductToVenta(product: products) {
     this.ListVenta.push(product);
-
   }
 
-  // Método para eliminar un producto seleccionado
   removeSelectedProduct(index: number) {
     this.ListVenta.splice(index, 1);
-
   }
 
   updateSubtotal(product: any) {
-    // Verificar que la cantidad y el precio de venta sean números válidos
-
-    // Calcular el subtotal multiplicando la cantidad por el precio de venta
     product.Subtotal = this.selectedQuantity * product.Pventa;
-
-
   }
 
-
-  // buscarRUC() {
-  // const token = '960868e5f3ebfe26dbf7f3131d624e29538c54b371004ea90c5c67ebef6bdc6e'; // Coloca aquí tu token de autorización
-
-  //const headers = new HttpHeaders({
-  //  'Authorization': `Bearer ${token}`
-  //});
-
-  // url = `https://apisperu.net/api/ruc/${this.numeroRuc}`;
-
-  // this.http.get<any>(url, { headers }).subscribe(
-  // (Response) => {
-  // this.rucInfo = Response.data;
-  //console.log(Response.data); // Muestra la respuesta en la consola
-  // Aquí puedes asignar la respuesta a una variable de tu componente si lo necesitas
-  //  },
-  //  (error) => {
-  //    console.error(error); // Maneja cualquier error que pueda ocurrir
-  //  }
-  //);
-  //}
-
-
+  // Método para buscar un DNI o RUC
   buscar() {
     if (this.numeroRucdni) {
       if (this.numeroRucdni.length === 8) {
@@ -152,34 +118,36 @@ export class VentaComponent implements OnInit {
       } else if (this.numeroRucdni.length === 11) {
         this.buscarRUC();
       } else {
-        console.error("El número ingresado no tiene la longitud adecuada para ser un DNI o un RUC.");
+        console.error(
+          'El número ingresado no tiene la longitud adecuada para ser un DNI o un RUC.'
+        );
       }
     } else {
-      console.error("No se ha ingresado ningún número de DNI o RUC.");
+      console.error('No se ha ingresado ningún número de DNI o RUC.');
     }
   }
 
-  
+  // Método para buscar un DNI usando el servicio de RENIEC
   buscarDNI() {
     if (this.numeroRucdni) {
       this._reniec.getDniData(this.numeroRucdni).subscribe(
-        (Response) => {
-          this.rucdni = Response.data;
-          console.log(Response.data);
+        (data: any) => {
+          this.rucdni = data;
+          console.log(data);
         },
         (error) => {
-         
           console.error(error);
         }
       );
-    
+    }
   }
-}
 
+  // Método para buscar un RUC usando una API externa
   buscarRUC() {
-    const tokens = "960868e5f3ebfe26dbf7f3131d624e29538c54b371004ea90c5c67ebef6bdc6e"; // Coloca aquí tu token de autorización
+    const tokens =
+      '960868e5f3ebfe26dbf7f3131d624e29538c54b371004ea90c5c67ebef6bdc6e'; // Coloca aquí tu token de autorización
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${tokens}`
+      Authorization: `Bearer ${tokens}`,
     });
 
     const url = `https://apisperu.net/api/ruc/${this.numeroRucdni}`;
@@ -187,20 +155,11 @@ export class VentaComponent implements OnInit {
     this.http.get<any>(url, { headers }).subscribe(
       (Response) => {
         this.rucInfo = Response.data;
-        console.log(Response.data)
+        console.log(Response.data);
       },
       (error) => {
         console.error(error);
       }
     );
   }
-
-  
-
-
 }
-
-
-
-
-

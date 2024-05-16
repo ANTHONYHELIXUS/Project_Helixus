@@ -1,11 +1,11 @@
 {
+  
     "/api": {
       "target": "https://api.apis.net.pe",
       "secure": false,
       "changeOrigin": true,
       "pathRewrite": {
-        "^/api": "{}"
+        "^/api": ""
       }
     }
   }
-  
