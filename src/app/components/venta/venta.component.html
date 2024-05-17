@@ -9,6 +9,7 @@
             <fieldset data-v-ad2a4970="" id="__BVID__32" role="group" class="b-form-group form-group">
               <!---->
               <div role="group" class="">
+<<<<<<< HEAD
                 <h2 data-v-ad2a49760="">
                   Tipo de Venta:
                   <b data-v-ad2a4970="" class="mostrarSerie" style="display: none">010 - 61837</b>
@@ -20,6 +21,15 @@
                   </option>
                   <option value="BOLETA ELECTRONICA">BOLETA ELECTRONICA</option>
                 </select>
+=======
+                <h2 data-v-ad2a49760="">Tipo de Venta:
+                  <b data-v-ad2a4970="" class="mostrarSerie" style="display: none">010 - 61837</b></h2>
+                  <select class="form-control">
+                    <option value="NOTA DE VENTA">NOTA DE VENTA</option>
+                    <option value="FACTURA ELECTRONICA">FACTURA ELECTRONICA</option>
+                    <option value="BOLETA ELECTRONICA">BOLETA ELECTRONICA</option>
+                  </select>
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                 <!----><!----><!---->
               </div>
             </fieldset>
@@ -45,6 +55,10 @@
           <div data-v-ad2a4970="" class="ocularMovil col-md-4" style="margin-top: 2px">
             <fieldset data-v-ad2a4970="" id="__BVID__36" role="group" class="b-form-group form-group">
               <!---->
+<<<<<<< HEAD
+=======
+              
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
             </fieldset>
           </div>
           <div data-v-ad2a4970="" class="col-md-12" style="margin-top: 2px">
@@ -55,8 +69,13 @@
                 <div data-v-ad2a4970="" role="group" class="input-group">
                   <!---->
                   <div data-v-ad2a4970="" class="autocomplete-wrapper">
+<<<<<<< HEAD
                     <input type="text" placeholder="Cliente varios" autocomplete="off"
                       class="form-control autocomplete-input" required="true" />
+=======
+                    <input type="text" placeholder="Cliente varios" autocomplete="off" class="form-control autocomplete-input"
+                      required="true" />
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                     <div class="autocomplete autocomplete-list" style="display: none">
                       <ul></ul>
                     </div>
@@ -79,6 +98,10 @@
                                   aria-describedby="modal1___BV_modal_body_" class="modal-content">
                                   <header id="modal1___BV_modal_header_" class="modal-header">
                                     <label class="modal-title">Nuevo Cliente</label>
+<<<<<<< HEAD
+=======
+                                    
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                                   </header>
                                   <div id="modal1___BV_modal_body_" class="modal-body">
                                     <div data-v-21ab9c64="" class="row">
@@ -89,6 +112,7 @@
                                           <div role="group" class="">
                                             <label for="rucInput">DNI / RUC:</label>
                                             <div data-v-21ab9c64="" role="group" class="input-group">
+<<<<<<< HEAD
                                               <input type="text" class="form-control" [(ngModel)]="numeroRucdni"
                                                 [ngModelOptions]="{
                                                   standalone: true
@@ -97,6 +121,12 @@
                                               <button class="btn btn-primary" (click)="buscar()">
                                                 Buscar
                                               </button>
+=======
+                                              <input type="text" class="form-control"   [(ngModel)]="numeroRucdni"  [ngModelOptions]="{standalone: true}" placeholder="Ingrese el RUC">
+
+                                              <button class="btn btn-primary" (click)="buscar()" >Buscar</button>
+                                          
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                                             </div>
                                             <!----><!----><!---->
                                           </div>
@@ -104,6 +134,7 @@
                                         <fieldset data-v-21ab9c64="" id="__BVID__45" role="group"
                                           class="b-form-group form-group">
                                           <!---->
+<<<<<<< HEAD
                                           <div *ngIf="rucdni">
                                           <div *ngIf="rucInfo">
                                             <label data-v-21ab9c64="">Nombre:
@@ -115,11 +146,27 @@
                                           </div>
                                         </div>
                                          
+=======
+                                          <div *ngIf="rucInfo"  >
+                                            <label data-v-21ab9c64="">Nombre del Cliente:</label>
+                                         
+                                       
+                                            <label>Información del RUC:</label>
+                                            <p><strong>Razón Social:</strong> {{ rucInfo.razonSocial }}</p>
+                                              
+                                              <!----><!----><!---->
+                                          </div>
+                                          <div >
+                                            <label>Información del DNI:</label>
+                                            <p><strong>Nombre:</strong> {{rucdni.nombres}}</p>
+                                          </div>
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                                         </fieldset>
                                         <fieldset data-v-21ab9c64="" id="__BVID__47" role="group"
                                           class="b-form-group form-group">
                                           <!---->
                                           <div role="group" class="">
+<<<<<<< HEAD
                                             <label data-v-21ab9c64="">Dirección:
                                             </label>
                                             <input data-v-21ab9c64="" id="__BVID__48" type="text"
@@ -127,6 +174,15 @@
                                               class="form-control" /><!----><!----><!---->
                                           </div>
                                         </fieldset>
+=======
+                                            <label data-v-21ab9c64="">Dirección: </label>
+                                            <input data-v-21ab9c64="" id="__BVID__48" type="text" value="{{rucInfo.direccion}}"
+                                              class="form-control" /><!----><!----><!---->
+                                          </div>
+                                        </fieldset>
+                                
+                                        
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                                       </div>
                                     </div>
                                     <div data-v-21ab9c64="" class="row">
@@ -157,9 +213,15 @@
                                           class="b-form-group form-group">
                                           <!---->
                                           <div role="group" class="">
+<<<<<<< HEAD
                                             <label data-v-21ab9c64="">Estado:</label>
                                             <input data-v-21ab9c64="" id="__BVID__58" type="text"
                                               value="{{ rucInfo.estado }}" class="form-control" /><!----><!----><!---->
+=======
+                                            <label data-v-21ab9c64="">Condicion:</label>
+                                            <input data-v-21ab9c64="" id="__BVID__58" type="text" value=""
+                                              class="form-control" /><!----><!----><!---->
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                                           </div>
                                         </fieldset>
                                       </div>
@@ -195,6 +257,19 @@
                                     </div>
                                     <div data-v-21ab9c64="" class="row">
                                       <div data-v-21ab9c64="" class="col">
+<<<<<<< HEAD
+=======
+                                        <div data-v-21ab9c64=""
+                                          class="custom-control custom-checkbox custom-control-inline">
+                                          <input id="__BVID__63" type="checkbox" autocomplete="off" true-value="1"
+                                            false-value="0" class="custom-control-input" value="1" /><label
+                                            for="__BVID__63" class="custom-control-label">
+                                            Marcar si es un cliente VIP
+                                          </label>
+                                        </div>
+                                      </div>
+                                      <div data-v-21ab9c64="" class="col">
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                                         <fieldset data-v-21ab9c64="" id="__BVID__64" role="group"
                                           class="b-form-group form-group">
                                           <!---->
@@ -206,6 +281,7 @@
                                         </fieldset>
                                       </div>
                                       <footer id="modal1___BV_modal_footer_" class="modal-footer">
+<<<<<<< HEAD
                                         <div data-v-21ab9c64="">
                                           <button data-v-21ab9c64="" type="submit" class="btn btn-primary">
                                             Guardar
@@ -215,6 +291,14 @@
                                             Close
                                           </button>
                                         </div>
+=======
+                                        <div data-v-21ab9c64=""><button data-v-21ab9c64="" type="submit"
+                                            class="btn btn-primary">
+                                            Guardar
+                                          </button> <button data-v-21ab9c64="" type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Close
+                                          </button></div>
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                                       </footer>
                                     </div>
                                   </div>
@@ -224,6 +308,10 @@
                             <!---->
                           </div>
                         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                       </form>
                     </div>
                   </div>
@@ -246,8 +334,12 @@
       </div>
 
       <div data-v-ad2a4970="" class="ocularMovil col-md-2">
+<<<<<<< HEAD
         <fieldset data-v-ad2a4970="" id="__BVID__66" role="group" class="text-center b-form-group form-group"
           style="margin-top: -10px">
+=======
+        <fieldset data-v-ad2a4970="" id="__BVID__66" role="group" class="text-center b-form-group form-group" style="margin-top: -10px;">
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
           <!---->
           <div role="group" class="">
             <div data-v-ad2a4970="" class="big-text">
@@ -257,8 +349,12 @@
             <!----><!----><!---->
           </div>
         </fieldset>
+<<<<<<< HEAD
         <fieldset data-v-ad2a4970="" id="__BVID__67" role="group" class="b-form-group form-group"
           style="padding-top: -50px">
+=======
+        <fieldset data-v-ad2a4970="" id="__BVID__67" role="group" class="b-form-group form-group" style="padding-top: -50px;">
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
           <!---->
           <div role="group" class="">
             <label data-v-ad2a4970="">Vendedor:</label>
@@ -304,7 +400,11 @@
                   <div data-v-bbc62c28="" role="group" class="input-group">
                     <div data-v-bbc62c28="" *ngIf="ListProductos.length">
                       <input class="form-control" id="inputlist" style="position: relative" [(ngModel)]="searchTerm"
+<<<<<<< HEAD
                         name="searchTerm" (input)="filtrarProductos()" (click)="abrirDesplegable()"
+=======
+                        name="searchTerm" (input)="filtrarProductos()" (click)="abrirDesplegable()" 
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
                         placeholder="Buscar Por Nombre..." />
 
                       <!-- <input class="form-control"  list="datalistOptions"  [(ngModel)]="searchTerm"  name="searchTerm" (click)="abrirDesplegable()"  placeholder="Buscar Por Nombre..." > -->

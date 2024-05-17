@@ -4,13 +4,21 @@ import ProductosComponent from './components/productos/productos.component';
 import { CategoriasMarcasComponent } from './components/categorias-marcas/categorias-marcas.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
+<<<<<<< HEAD
 import { DetallventaComponent } from './components/venta/detallventa/detallventa.component';
+=======
+import { DetallventaComponent } from './components/productos/detallventa/detallventa.component';
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
 
 
 
 export const routes: Routes = [
     {
+<<<<<<< HEAD
         path:'',loadChildren:()=>import('./components/inicio-sesion/inicio-sesion.routes').then(m=>m.AUTH_ROUTES)
+=======
+        path:'', loadChildren:()=>import('./components/inicio-sesion/inicio-sesion.routes').then(m=>m.AUTH_ROUTES)
+>>>>>>> 63c742afb1bf43bd307171ada19daf1701cca903
     },
     {
         path:'Venta', loadChildren:()=>import('./components/venta/venta.routes').then(m=>m.VENTA_ROUTES)
